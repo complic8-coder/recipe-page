@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root {
+    --dark-raspberry: hsl(332, 51%, 32%);
+    --wenge-brown: hsl(14, 45%, 36%);
+    --light-grey: hsl(30, 18%, 87%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: hsl(30, 54%, 90%);
+    font-family: 'Outfit', sans-serif;
+}
+
+h1,
+h2 {
+    font-family: 'Young Serif', serif;
+    font-weight: 400;
+}
+
+p,
+li,
+table {
+    color: hsl(30, 10%, 34%);
+    font-size: 16px;
+}
+
+strong {
+    font-weight: 600;
+}
+
+.page {
+    width: 736px;
+    height: 1709px;
+    margin: 122px auto;
+    border-radius: 24px;
+    background: hsl(0, 0%, 100%);
+}
+
+.page .img-header {
+    width: 100%;
+    margin-bottom: 29px;
+    padding: 40px 40px 0;
+    border-radius: 12px;
+}
+
+.page_content {
+    padding: 0 40px;
+}
+
+.page_content .main-header {
+    margin-bottom: 16px;
+    font-size: 40px;
+    color: hsl(24, 5%, 18%);
+}
+
+.page_content .main-desc {
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+/* || PREPARATION */
+
+.preparation {
+    padding: 25px 28px;
+    border-radius: 16px;
+    background: hsl(330, 100%, 98%);
+}
+
+.preparation h2 {
+    margin-bottom: 10px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    color: var(--dark-raspberry);
+    font-weight: 600;
+}
+
+.preparation .time-list {
+    margin-left: 24px;
+    line-height: 2;
+}
+
+.preparation .time-list li {
+    padding-left: 18px;
+}
+
+.preparation .time-list li::marker {
+    font-size: 10px;
+    color: var(--dark-raspberry);
+}
+
+/* || PAGE SECTION DEFAULTS */
+
+.page_section {
+    padding: 26px 0 25px;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.page_section .section-header {
+    font-size: 28px;
+    color: var(--wenge-brown);
+}
+
+.page_section ul li::marker,
+.page_section ol li::marker {
+    color: var(--wenge-brown);
+}
+
+/* || INGREDIENTS */
+
+.ingredients .section-header {
+    margin-bottom: 14px;
+}
+
+.ingredients .ingredients-list {
+    margin-left: 22px;
+    line-height: 2;
+}
+
+.ingredients .ingredients-list li {
+    padding-left: 18px;
+}
+
+/* || INSTRUCTIONS */
+
+.instructions .section-header {
+    margin-bottom: 20px;
+}
+
+.instructions .instructions-list {
+    margin-left: 26px;
+}
+
+.instructions .instructions-list li {
+    margin-bottom: 8px;
+    padding-left: 16px;
+    line-height: 1.5;
+}
+
+.instructions .instructions-list li::marker {
+    font-weight: 600;
+}
+
+/* || NUTRITION */
+
+.nutrition {
+    border-bottom: none;
+}
+
+.nutrition .section-header {
+    margin-bottom: 19px;
+}
+
+.nutrition p {
+    margin-bottom: 10px;
+}
+
+.nutrition .nutrition-table {
+    width: 100%;
+}
+
+.nutrition .nutrition-table tr {
+    display: grid;
+    padding: 14px 0;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.nutrition .nutrition-table tr:last-child {
+    border-bottom: none;
+}
+
+.nutrition .nutrition-table .label {
+    padding-left: 30px;
+}
+
+.nutrition .nutrition-table .value {
+    padding-left: 9px;
+    color: var(--wenge-brown);
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .page {
+        width: 100%;
+        height: fit-content;
+        margin-top: 0;
+        border-radius: 0;
+    }
+
+    .page .img-header {
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .page_content {
+        padding: 7px 32px;
+        line-height: 1;
+    }
+
+    .page_content .main-header {
+        margin-bottom: 24px;
+        font-size: 36px;
+    }
+
+    .preparation {
+        padding: 23px;
+    }
+
+    .preparation h2 {
+        margin-bottom: 16px;
+    }
+
+    .preparation .time-list {
+        margin-left: 20px;
+    }
+
+    .preparation .time-list li {
+        margin-bottom: 8px;
+        padding-left: 22px;
+        line-height: 1.5;
+    }
+
+    .ingredients .section-header {
+        margin-bottom: 23px;
+    }
+
+    .ingredients .ingredients-list li {
+        line-height: 1.5;
+        margin-bottom: 8px;
+    }
+
+    .instructions {
+        padding: 30px 0 22px;
+    }
+
+    .instructions .section-header {
+        margin-bottom: 25px;
+    }
+
+    .instructions .instructions-list li {
+        letter-spacing: -0.1px;
+    }
+
+    .nutrition {
+        padding: 32px 0 22px;
+    }
+
+    .nutrition .section-header {
+        margin-bottom: 26px;
+    }
+
+    .nutrition p {
+        margin-bottom: 7px;
+        padding-right: 20px;
+        line-height: 1.5;
+    }
+
+    .nutrition .nutrition-table tr {
+        padding: 16px 0;
+    }
+}
